@@ -10,6 +10,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_deepseek import ChatDeepSeek
 
 load_dotenv()
+assert os.getenv("DEEPSEEK_API_KEY") is not None, "DEEPSEEK_API_KEY is not set" # 确保DEEPSEEK_API_KEY已经设置
 
 markdown_path = "../../data/C1/markdown/easy-rl-chapter1.md"
 
